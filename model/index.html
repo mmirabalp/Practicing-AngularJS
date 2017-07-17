@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app = "myApp">
+<head>
+    <title>My AngularJS App</title>
+    <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src = "controller.js"></script>
+</head>
+    <body ng-controller= "indexController">
+
+        <h4>Add Comment</h4>
+        <input type="text" ng-model="newComment.comment">
+
+        <h4>Add User Name</h4>
+        <input type="text" ng-model="newComment.userName">
+
+
+        <button ng-click="addComments()">Add Comment</button>
+            <h3>Comments</h3>
+                <ul>
+                    <li ng-repeat="comment in comments">
+                        {{comment.comment}} - <strong>{{comment.userName}}</strong>
+                    </li>
+                </ul>
+
+
+
+
+    </body>
+</html>
